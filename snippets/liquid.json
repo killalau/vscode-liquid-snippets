@@ -17,6 +17,14 @@
         ]
     },
 
+    "Tag elsif": {
+        "prefix": "elsif",
+        "description": "Control flow tag: elsif",
+        "body": [
+            "{% elsif ${condition} %}"
+        ]
+    },
+
     "Tag if else": {
         "prefix": "ifelse",
         "description": "Control flow tag: if else",

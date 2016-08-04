@@ -547,19 +547,19 @@
 
     "Filter asset url": {
         "prefix": "asset_url",
-        "description": "String filter: asset url",
+        "description": "URL filter: asset url",
         "body": "| asset_url"
     },
 
     "Filter asset img url": {
         "prefix": "asset_img_url",
-        "description": "String filter: asset img url",
+        "description": "URL filter: asset img url",
         "body": "| asset_img_url: '${size:medium}'"
     },
 
     "Filter img url": {
         "prefix": "img_url",
-        "description": "String filter: img url",
+        "description": "URL filter: img url",
         "body": "| img_url: '${size:medium}'"
     }
 }

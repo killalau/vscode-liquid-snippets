@@ -11,6 +11,7 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 ```javascript
 if
 else
+elsif
 ifelse
 unless
 case

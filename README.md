@@ -1,6 +1,9 @@
 # Shopify Liquid Template Snippets for VS Code
 This extension for Visual Studio Code adds snippets for Shopify Liquid Template.
 
+## Preview
+![Showcase](./images/showcase.gif)
+
 ## Usage
 Type part of a snippet, press `enter`, and the snippet unfolds.
 

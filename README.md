@@ -65,7 +65,7 @@ uniq
 ### HTML Filter
 ```javascript
 img_tag
-img_tag  // HTML Filter {% img_tag %} with parameters
+img_tag_param  // HTML Filter {% img_tag %} with parameters
 script_tag
 stylesheet_tag
 ```
@@ -118,8 +118,8 @@ strip_newlines
 truncate
 truncatewords
 upcase
-encode
-escape
+url_encode
+url_escape
 url_param_escape
 ```
 

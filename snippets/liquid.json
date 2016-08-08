@@ -173,7 +173,7 @@
         "prefix": "capture",
         "description": "Variable tag: capture",
         "body": [
-            "{% capture ${variable} %}${code:}{% capture %}"
+            "{% capture ${variable} %}${code:}{% endcapture %}"
         ]
     },
 

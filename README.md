@@ -1,6 +1,9 @@
 # Shopify Liquid Template Snippets for VS Code
 This extension for Visual Studio Code adds snippets for Shopify Liquid Template.
 
+## Prerequisite
+[Liquid Languages Support](https://marketplace.visualstudio.com/items?itemName=neilding.language-liquid)
+
 ## Preview
 ![Showcase](./images/showcase.gif)
 

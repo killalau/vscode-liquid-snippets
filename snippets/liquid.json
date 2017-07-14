@@ -3,114 +3,104 @@
         "prefix": "if",
         "description": "Control flow tag: if",
         "body": [
-            "{% if ${condition} %}",
-            "\t${code:}",
+            "{% if ${1:condition} %}",
+            "\t$2",
             "{% endif %}"
         ]
     },
-
     "Tag else": {
         "prefix": "else",
         "description": "Control flow tag: else",
         "body": [
-            "{% else %}"
+            "{% else %}",
+            "\t"
         ]
     },
-
     "Tag elsif": {
         "prefix": "elsif",
         "description": "Control flow tag: elsif",
         "body": [
-            "{% elsif ${condition} %}"
+            "{% elsif ${1:condition} %}",
+            "\t"
         ]
     },
-
     "Tag if else": {
         "prefix": "ifelse",
         "description": "Control flow tag: if else",
         "body": [
-            "{% if ${condition} %}",
-            "\t${code1:}",
+            "{% if ${1:condition} %}",
+            "\t$2",
             "{% else %}",
-            "\t${code2:}",
+            "\t$3",
             "{% endif %}"
         ]
     },
-
     "Tag unless": {
         "prefix": "unless",
         "description": "Control flow tag: unless",
         "body": [
-            "{% unless ${condition} %}",
-            "\t${code:}",
+            "{% unless ${1:condition} %}",
+            "\t$2",
             "{% endunless %}"
         ]
     },
-
     "Tag case": {
         "prefix": "case",
         "description": "Control flow tag: case",
         "body": [
-            "{% case ${variable} %}",
-            "\t{% when ${condition} %}",
-            "\t\t${code1:}",
+            "{% case ${1:variable} %}",
+            "\t{% when ${2:condition} %}",
+            "\t\t$3",
             "\t{% else %}",
-            "\t\t${code2:}",
+            "\t\t$4",
             "{% endcase %}"
         ]
     },
-
     "Tag when": {
         "prefix": "when",
         "description": "Control flow tag: when",
         "body": [
-            "{% when ${condition} %}",
-            "${code:}"
+            "{% when ${1:condition} %}",
+            "$0"
         ]
     },
-
     "Tag cycle": {
         "prefix": "cycle",
         "description": "Iteration tag: cycle",
         "body": [
-            "{% cycle '${0:odd}', '${1:even}' %}"
+            "{% cycle '${1:odd}', '${2:even}' %}"
         ]
     },
-
     "Tag cycle group": {
         "prefix": "cyclegroup",
         "description": "Iteration tag: cycle group",
         "body": [
-            "{% cycle '${groupName:group name}': '${1:odd}', '${2:even}' %}"
+            "{% cycle '${1:group name}': '${2:odd}', '${3:even}' %}"
         ]
     },
-
     "Tag for": {
         "prefix": "for",
         "description": "Iteration tag: for",
         "body": [
-            "{% for ${item} in ${collection} %}",
-            "\t${code:}",
+            "{% for ${1:item} in ${2:collection} %}",
+            "\t$3",
             "{% endfor %}"
         ]
     },
-
     "Tag Option limit": {
         "prefix": "limit",
         "description": "For loops option",
         "body": [
-            "limit: ${limit:5}"
+            "limit: ${1:5}"
         ]
     },
-
     "Tag Option offset": {
         "prefix": "offset",
         "description": "For loops option",
         "body": [
-            "offset: ${offset:0}"
+            "offset: ${1:0}"
         ]
     },
-
     "Tag Option reversed": {
         "prefix": "reversed",
         "description": "For loops option",
@@ -118,7 +108,6 @@
             "reversed"
         ]
     },
-
     "Tag break": {
         "prefix": "break",
         "description": "Iteration tag: break",
@@ -126,7 +115,6 @@
             "{% break %}"
         ]
     },
-
     "Tag continue": {
         "prefix": "continue",
         "description": "Iteration tag: continue",
@@ -134,81 +122,71 @@
             "{% continue %}"
         ]
     },
-
     "Tag tablerow": {
         "prefix": "tablerow",
         "description": "Iteration tag: tablerow",
         "body": [
-            "{% tablerow ${item} in ${collection} cols: ${cols:2} %}",
-            "\t${code:}",
+            "{% tablerow ${1:item} in ${2:collection} cols: ${3:2} %}",
+            "\t$4",
             "{% endtablerow %}"
         ]
     },
-
     "Tag assign": {
         "prefix": "assign",
         "description": "Variable tag: assign",
         "body": [
-            "{% assign ${variable} = ${value} %}"
+            "{% assign ${1:variable} = ${2:value} %}"
         ]
     },
-
     "Tag increment": {
         "prefix": "increment",
         "description": "Variable tag: increment",
         "body": [
-            "{% increment ${variable} %}"
+            "{% increment ${1:variable} %}"
         ]
     },
-
     "Tag decrement": {
         "prefix": "decrement",
         "description": "Variable tag: decrement",
         "body": [
-            "{% decrement ${variable} %}"
+            "{% decrement ${1:variable} %}"
         ]
     },
-
     "Tag capture": {
         "prefix": "capture",
         "description": "Variable tag: capture",
         "body": [
-            "{% capture ${variable} %}${code:}{% endcapture %}"
+            "{% capture ${1:variable} %}$2{% endcapture %}"
         ]
     },
-
     "Tag include": {
         "prefix": "include",
         "description": "Theme tag: include",
         "body": [
-            "{% include '${snippet}' %}"
+            "{% include '${1:snippet}' %}"
         ]
     },
-
     "Tag include with parameters": {
         "prefix": "includewith",
         "description": "Theme tag: include with parameters",
         "body": [
-            "{% include '${snippet}', ${variable}: ${value} %}"
+            "{% include '${1:snippet}', ${2:variable}: ${3:value} %}"
         ]
     },
-
     "Tag raw": {
         "prefix": "raw",
         "description": "Theme tag: raw",
         "body": [
-            "{% raw %}${code:}{% endraw %}"
+            "{% raw %}$1{% endraw %}"
         ]
     },
-
     "Tag layout": {
         "prefix": "layout",
         "description": "Theme tag: layout",
         "body": [
-            "{% layout ${layout:'layout'} %}"
+            "{% layout '${1:layout}' %}"
         ]
     },
-
     "Tag no layout": {
         "prefix": "layoutnone",
         "description": "Theme tag: layout none",
@@ -216,358 +194,300 @@
             "{% layout none %}"
         ]
     },
-
     "Tag paginate": {
         "prefix": "paginate",
         "description": "Theme tag: paginate",
         "body": [
-            "{% paginate ${collection:collection.products} by ${perPage:12} %}",
-            "\t{% for ${item:product} in ${collection:collection.products} %}",
-            "\t\t${code:}",
+            "{% paginate ${1:collection.products} by ${2:12} %}",
+            "\t{% for ${3:product} in ${1:collection.products} %}",
+            "\t\t$4",
             "\t{% endfor %}",
             "{% endpaginate %}"
         ]
     },
-
     "Filter join": {
         "prefix": "join",
         "description": "Array filter: join",
-        "body": "| join: '${seperator:, }'"
+        "body": "| join: '${1:, }'"
     },
-
     "Filter first": {
         "prefix": "first",
         "description": "Array filter: first",
         "body": "| first"
     },
-
     "Filter last": {
         "prefix": "last",
         "description": "Array filter: last",
         "body": "| last"
     },
-
     "Filter concat": {
         "prefix": "concat",
         "description": "Array filter: concat",
-        "body": "| concat: ${array}"
+        "body": "| concat: ${1:array}"
     },
-
     "Filter map": {
         "prefix": "map",
         "description": "Array filter: map",
-        "body": "| map: '${key}'"
+        "body": "| map: '${1:key}'"
     },
-
     "Filter reverse": {
         "prefix": "reverse",
         "description": "Array filter or String filter: reverse",
         "body": "| reverse"
     },
-
     "Filter size": {
         "prefix": "size",
         "description": "Array filter: size",
         "body": "| size"
     },
-
     "Filter sort": {
         "prefix": "sort",
         "description": "Array filter: sort",
-        "body": "| sort: '${key}'"
+        "body": "| sort: '${1:key}'"
     },
-
     "Filter uniq": {
         "prefix": "uniq",
         "description": "Array filter: uniq",
         "body": "| uniq"
     },
-
     "Filter img tag": {
         "prefix": "img_tag",
         "description": "HTML filter: img tag",
         "body": "| img_tag"
     },
-
     "Filter img tag with parameters": {
         "prefix": "img_tag_param",
         "description": "HTML filter: img tag with parameters",
-        "body": "| img_tag: '${alt}', '${class}'"
+        "body": "| img_tag: '${1:alt}', '${2:class}'"
     },
-
     "Filter script tag": {
         "prefix": "script_tag",
         "description": "HTML filter: script tag",
         "body": "| script_tag"
     },
-
     "Filter stylesheet tag": {
         "prefix": "stylesheet_tag",
         "description": "HTML filter: stylesheet tag",
         "body": "| stylesheet_tag"
     },
-
     "Filter abs": {
         "prefix": "abs",
         "description": "Math filter: abs",
         "body": "| abs"
     },
-
     "Filter ceil": {
         "prefix": "ceil",
         "description": "Math filter: ceil",
         "body": "| ceil"
     },
-
     "Filter divided by": {
         "prefix": "divided_by",
         "description": "Math filter: divided by",
-        "body": "| divided_by: ${divided_by:2}"
+        "body": "| divided_by: ${1:2}"
     },
-
     "Filter floor": {
         "prefix": "floor",
         "description": "Math filter: floor",
         "body": "| floor"
     },
-
     "Filter minus": {
         "prefix": "minus",
         "description": "Math filter: minus",
-        "body": "| minus: ${minus:1}"
+        "body": "| minus: ${1:1}"
     },
-
     "Filter plus": {
         "prefix": "plus",
         "description": "Math filter: plus",
-        "body": "| plus: ${plus:1}"
+        "body": "| plus: ${1:1}"
     },
-
     "Filter round": {
         "prefix": "round",
         "description": "Math filter: round",
-        "body": "| round: ${round:0}"
+        "body": "| round: ${1:0}"
     },
-
     "Filter times": {
         "prefix": "times",
         "description": "Math filter: times",
-        "body": "| times: ${times:1}"
+        "body": "| times: ${1:1}"
     },
-
     "Filter modulo": {
         "prefix": "modulo",
         "description": "Math filter: modulo",
-        "body": "| modulo: ${modulo:2}"
+        "body": "| modulo: ${1:2}"
     },
-
     "Filter money": {
         "prefix": "money",
         "description": "Money filter: money",
         "body": "| money"
     },
-
     "Filter money with currency": {
         "prefix": "money_with_currency",
         "description": "Money filter: money with currency",
         "body": "| money_with_currency"
     },
-
     "Filter money without trailing zeros": {
         "prefix": "money_without_trailing_zeros",
         "description": "Money filter: money without trailing zeros",
         "body": "| money_without_trailing_zeros"
     },
-
     "Filter money without currency": {
         "prefix": "money_without_currency",
         "description": "Money filter: money without currency",
         "body": "| money_without_currency"
     },
-
     "Filter append": {
         "prefix": "append",
         "description": "String filter: append",
-        "body": "| append: '${string}'"
+        "body": "| append: '${1:string}'"
     },
-
     "Filter camelcase": {
         "prefix": "camelcase",
         "description": "String filter: camelcase",
         "body": "| camelcase"
     },
-
     "Filter capitalize": {
         "prefix": "capitalize",
         "description": "String filter: capitalize",
         "body": "| capitalize"
     },
-
     "Filter downcase": {
         "prefix": "downcase",
         "description": "String filter: downcase",
         "body": "| downcase"
     },
-
     "Filter escape": {
         "prefix": "escape",
         "description": "String filter: escape",
         "body": "| escape"
     },
-
     "Filter handleize": {
         "prefix": "handleize",
         "description": "String filter: handleize",
         "body": "| handleize"
     },
-
     "Filter md5": {
         "prefix": "md5",
         "description": "String filter: md5",
         "body": "| md5"
     },
-
     "Filter newline to br": {
         "prefix": "newline_to_br",
         "description": "String filter: newline to br",
         "body": "| newline_to_br"
     },
-
     "Filter pluralize": {
         "prefix": "pluralize",
         "description": "String filter: pluralize",
-        "body": "| pluralize: '${item}', '${items}'"
+        "body": "| pluralize: '${1:item}', '${2:items}'"
     },
-
     "Filter prepend": {
         "prefix": "prepend",
         "description": "String filter: prepend",
-        "body": "| prepend: '${string}'"
+        "body": "| prepend: '${1:string}'"
     },
-
     "Filter remove": {
         "prefix": "remove",
         "description": "String filter: remove",
-        "body": "| remove: '${string}'"
+        "body": "| remove: '${1:string}'"
     },
-
     "Filter remove first": {
         "prefix": "remove_first",
         "description": "String filter: remove first",
-        "body": "| remove_first: '${string}'"
+        "body": "| remove_first: '${1:string}'"
     },
-
     "Filter replace": {
         "prefix": "replace",
         "description": "String filter: replace",
-        "body": "| replace: '${target}', '${replace}'"
+        "body": "| replace: '${1:target}', '${2:replace}'"
     },
-
     "Filter replace first": {
         "prefix": "replace_first",
         "description": "String filter: replace first",
-        "body": "| replace_first: '${target}', '${replace}'"
+        "body": "| replace_first: '${1:target}', '${2:replace}'"
     },
-
     "Filter slice": {
         "prefix": "slice",
         "description": "String filter: slice",
-        "body": "| slice: ${from:0}, ${to:5}"
+        "body": "| slice: ${1:0}, ${2:5}"
     },
-
     "Filter slice single character": {
         "prefix": "slice_single",
         "description": "String filter: slice with single parameter",
-        "body": "| slice: ${at}"
+        "body": "| slice: ${1:at}"
     },
-
     "Filter split": {
         "prefix": "split",
         "description": "String filter: split",
-        "body": "| split: '${splitter:,}'"
+        "body": "| split: '${1:,}'"
     },
-
     "Filter strip": {
         "prefix": "strip",
         "description": "String filter: strip",
         "body": "| strip"
     },
-
     "Filter lstrip": {
         "prefix": "lstrip",
         "description": "String filter: lstrip",
         "body": "| lstrip"
     },
-
     "Filter rstrip": {
         "prefix": "rstrip",
         "description": "String filter: rstrip",
         "body": "| rstrip"
     },
-
     "Filter strip html": {
         "prefix": "strip_html",
         "description": "String filter: strip html",
         "body": "| strip_html"
     },
-
     "Filter strip newlines": {
         "prefix": "strip_newlines",
         "description": "String filter: strip newlines",
         "body": "| strip_newlines"
     },
-
     "Filter truncate": {
         "prefix": "truncate",
         "description": "String filter: truncate",
-        "body": "| truncate: ${length:20}, '${ellipsis:...}'"
+        "body": "| truncate: ${1:20}, '${2:...}'"
     },
-
     "Filter truncatewords": {
         "prefix": "truncatewords",
         "description": "String filter: truncatewords",
-        "body": "| truncatewords: ${length:5}, '${ellipsis:...}'"
+        "body": "| truncatewords: ${1:5}, '${2:...}'"
     },
-
     "Filter upcase": {
         "prefix": "upcase",
         "description": "String filter: upcase",
         "body": "| upcase"
     },
-
     "Filter url encode": {
         "prefix": "url_encode",
         "description": "String filter: url encode",
         "body": "| url_encode"
     },
-
     "Filter url escape": {
         "prefix": "url_escape",
         "description": "String filter: url escape",
         "body": "| url_escape"
     },
-
     "Filter url param escape": {
         "prefix": "url_param_escape",
         "description": "String filter: url param escape",
         "body": "| url_param_escape"
     },
-
     "Filter asset url": {
         "prefix": "asset_url",
         "description": "URL filter: asset url",
         "body": "| asset_url"
     },
-
     "Filter asset img url": {
         "prefix": "asset_img_url",
         "description": "URL filter: asset img url",
-        "body": "| asset_img_url: '${size:medium}'"
+        "body": "| asset_img_url: '${1:medium}'"
     },
-
     "Filter img url": {
         "prefix": "img_url",
         "description": "URL filter: img url",
-        "body": "| img_url: '${size:medium}'"
+        "body": "| img_url: '${1:medium}'"
     }
 }

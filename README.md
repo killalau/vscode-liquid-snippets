@@ -145,3 +145,6 @@ asset_url
 asset_img_url
 img_url
 ```
+
+## License
+MIT

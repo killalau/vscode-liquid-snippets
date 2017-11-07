@@ -146,5 +146,10 @@ asset_img_url
 img_url
 ```
 
+## Release
+
+### 2.0.0
+- Add whitespace control
+
 ## License
 MIT

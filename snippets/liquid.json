@@ -3,16 +3,16 @@
         "prefix": "if",
         "description": "Control flow tag: if",
         "body": [
-            "{%- if ${1:condition} -%}",
+            "{% if ${1:condition} %}",
             "\t$2",
-            "{%- endif -%}"
+            "{% endif %}"
         ]
     },
     "Tag else": {
         "prefix": "else",
         "description": "Control flow tag: else",
         "body": [
-            "{%- else -%}",
+            "{% else %}",
             "\t"
         ]
     },
@@ -20,7 +20,7 @@
         "prefix": "elsif",
         "description": "Control flow tag: elsif",
         "body": [
-            "{%- elsif ${1:condition} -%}",
+            "{% elsif ${1:condition} %}",
             "\t"
         ]
     },
@@ -28,39 +28,39 @@
         "prefix": "ifelse",
         "description": "Control flow tag: if else",
         "body": [
-            "{%- if ${1:condition} -%}",
+            "{% if ${1:condition} %}",
             "\t$2",
-            "{%- else -%}",
+            "{% else %}",
             "\t$3",
-            "{%- endif -%}"
+            "{% endif %}"
         ]
     },
     "Tag unless": {
         "prefix": "unless",
         "description": "Control flow tag: unless",
         "body": [
-            "{%- unless ${1:condition} -%}",
+            "{% unless ${1:condition} %}",
             "\t$2",
-            "{%- endunless -%}"
+            "{% endunless %}"
         ]
     },
     "Tag case": {
         "prefix": "case",
         "description": "Control flow tag: case",
         "body": [
-            "{%- case ${1:variable} -%}",
-            "\t{%- when ${2:condition} -%}",
+            "{% case ${1:variable} %}",
+            "\t{% when ${2:condition} %}",
             "\t\t$3",
-            "\t{%- else -%}",
+            "\t{% else %}",
             "\t\t$4",
-            "{%- endcase -%}"
+            "{% endcase %}"
         ]
     },
     "Tag when": {
         "prefix": "when",
         "description": "Control flow tag: when",
         "body": [
-            "{%- when ${1:condition} -%}",
+            "{% when ${1:condition} %}",
             "$0"
         ]
     },
@@ -68,23 +68,23 @@
         "prefix": "cycle",
         "description": "Iteration tag: cycle",
         "body": [
-            "{%- cycle '${1:odd}', '${2:even}' -%}"
+            "{% cycle '${1:odd}', '${2:even}' %}"
         ]
     },
     "Tag cycle group": {
         "prefix": "cyclegroup",
         "description": "Iteration tag: cycle group",
         "body": [
-            "{%- cycle '${1:group name}': '${2:odd}', '${3:even}' -%}"
+            "{% cycle '${1:group name}': '${2:odd}', '${3:even}' %}"
         ]
     },
     "Tag for": {
         "prefix": "for",
         "description": "Iteration tag: for",
         "body": [
-            "{%- for ${1:item} in ${2:collection} -%}",
+            "{% for ${1:item} in ${2:collection} %}",
             "\t$3",
-            "{%- endfor -%}"
+            "{% endfor %}"
         ]
     },
     "Tag Option limit": {
@@ -119,23 +119,23 @@
         "prefix": "continue",
         "description": "Iteration tag: continue",
         "body": [
-            "{%- continue -%}"
+            "{% continue %}"
         ]
     },
     "Tag tablerow": {
         "prefix": "tablerow",
         "description": "Iteration tag: tablerow",
         "body": [
-            "{%- tablerow ${1:item} in ${2:collection} cols: ${3:2} -%}",
+            "{% tablerow ${1:item} in ${2:collection} cols: ${3:2} %}",
             "\t$4",
-            "{%- endtablerow -%}"
+            "{% endtablerow %}"
         ]
     },
     "Tag assign": {
         "prefix": "assign",
         "description": "Variable tag: assign",
         "body": [
-            "{%- assign ${1:variable} = ${2:value} -%}"
+            "{% assign ${1:variable} = ${2:value} %}"
         ]
     },
     "Tag increment": {
@@ -156,7 +156,7 @@
         "prefix": "capture",
         "description": "Variable tag: capture",
         "body": [
-            "{%- capture ${1:variable} -%}$2{%- endcapture -%}"
+            "{% capture ${1:variable} %}$2{% endcapture %}"
         ]
     },
     "Tag include": {
@@ -171,6 +171,13 @@
         "description": "Theme tag: include with parameters",
         "body": [
             "{% include '${1:snippet}', ${2:variable}: ${3:value} %}"
+        ]
+    },
+    "Tag section": {
+        "prefix": "section",
+        "description": "Theme tag: section",
+        "body": [
+            "{% section '${1:snippet}' %}"
         ]
     },
     "Tag raw": {
@@ -203,6 +210,124 @@
             "\t\t$4",
             "\t{% endfor %}",
             "{% endpaginate %}"
+        ]
+    },
+    "Tag if, whitespaced": {
+        "prefix": "if-",
+        "description": "Control flow tag: if, whitespaced",
+        "body": [
+            "{%- if ${1:condition} -%}",
+            "\t$2",
+            "{%- endif -%}"
+        ]
+    },
+    "Tag else, whitespaced": {
+        "prefix": "else-",
+        "description": "Control flow tag: else, whitespaced",
+        "body": [
+            "{%- else -%}",
+            "\t"
+        ]
+    },
+    "Tag elsif, whitespaced": {
+        "prefix": "elsif-",
+        "description": "Control flow tag: elsif, whitespaced",
+        "body": [
+            "{%- elsif ${1:condition} -%}",
+            "\t"
+        ]
+    },
+    "Tag if else, whitespaced": {
+        "prefix": "ifelse-",
+        "description": "Control flow tag: if else, whitespaced",
+        "body": [
+            "{%- if ${1:condition} -%}",
+            "\t$2",
+            "{%- else -%}",
+            "\t$3",
+            "{%- endif -%}"
+        ]
+    },
+    "Tag unless, whitespaced": {
+        "prefix": "unless-",
+        "description": "Control flow tag: unless, whitespaced",
+        "body": [
+            "{%- unless ${1:condition} -%}",
+            "\t$2",
+            "{%- endunless -%}"
+        ]
+    },
+    "Tag case, whitespaced": {
+        "prefix": "case-",
+        "description": "Control flow tag: case, whitespaced",
+        "body": [
+            "{%- case ${1:variable} -%}",
+            "\t{%- when ${2:condition} -%}",
+            "\t\t$3",
+            "\t{%- else -%}",
+            "\t\t$4",
+            "{%- endcase -%}"
+        ]
+    },
+    "Tag when, whitespaced": {
+        "prefix": "when-",
+        "description": "Control flow tag: when, whitespaced",
+        "body": [
+            "{%- when ${1:condition} -%}",
+            "$0"
+        ]
+    },
+    "Tag cycle, whitespaced": {
+        "prefix": "cycle-",
+        "description": "Iteration tag: cycle, whitespaced",
+        "body": [
+            "{%- cycle '${1:odd}', '${2:even}' -%}"
+        ]
+    },
+    "Tag cycle group, whitespaced": {
+        "prefix": "cyclegroup-",
+        "description": "Iteration tag: cycle group, whitespaced",
+        "body": [
+            "{%- cycle '${1:group name}': '${2:odd}', '${3:even}' -%}"
+        ]
+    },
+    "Tag for, whitespaced": {
+        "prefix": "for-",
+        "description": "Iteration tag: for, whitespaced",
+        "body": [
+            "{%- for ${1:item} in ${2:collection} -%}",
+            "\t$3",
+            "{%- endfor -%}"
+        ]
+    },
+    "Tag continue, whitespaced": {
+        "prefix": "continue-",
+        "description": "Iteration tag: continue, whitespaced",
+        "body": [
+            "{%- continue -%}"
+        ]
+    },
+    "Tag tablerow, whitespaced": {
+        "prefix": "tablerow-",
+        "description": "Iteration tag: tablerow, whitespaced",
+        "body": [
+            "{%- tablerow ${1:item} in ${2:collection} cols: ${3:2} -%}",
+            "\t$4",
+            "{%- endtablerow -%}"
+        ]
+    },
+    "Tag assign, whitespaced": {
+        "prefix": "assign-",
+        "description": "Variable tag: assign, whitespaced",
+        "body": [
+            "{%- assign ${1:variable} = ${2:value} -%}"
+        ]
+    },
+    "Tag capture, whitespaced": {
+        "prefix": "capture-",
+        "description": "Variable tag: capture, whitespaced",
+        "body": [
+            "{%- capture ${1:variable} -%}$2{%- endcapture -%}"
         ]
     },
     "Filter join": {

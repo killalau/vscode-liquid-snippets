@@ -32,6 +32,13 @@ ifelse
 unless
 case
 when
+if-     // whitespace stripped
+else-   // whitespace stripped
+elsif-  // whitespace stripped
+ifelse- // whitespace stripped
+unless- // whitespace stripped
+case-   // whitespace stripped
+when-   // whitespace stripped
 ```
 
 ### Iteration Tag
@@ -45,6 +52,11 @@ reversed    // For loops option
 break
 continue
 tablerow
+cycle-      // whitespace stripped
+cyclegroup- // whitespace stripped
+for-        // whitespace stripped
+continue-   // whitespace stripped
+tablerow-   // whitespace stripped
 ```
 
 ### Variable Tag
@@ -53,12 +65,15 @@ assign
 increment
 decrement
 capture
+assign-  // whitespace stripped
+capture- // whitespace stripped
 ```
 
 ### Theme Tag
 ```javascript
 include
 includewith    // Theme Tag {% include %} with parameters
+section
 raw
 layout
 layoutnone
@@ -148,7 +163,10 @@ img_url
 
 ## Release
 
-### 2.0.0
+### 1.0.1
+- Add keep both tag for whitespace and non-whitespace control
+
+### 1.0.0
 - Add whitespace control
 
 ## License

@@ -23,6 +23,11 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 
 Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.
 
+### Comment Tag
+```javascript
+comment- // whitespace stripped
+```
+
 ### Control Flow Tag
 ```javascript
 if
@@ -162,6 +167,9 @@ img_url
 ```
 
 ## Release
+
+### 1.1.0
+- Add whitespaced comment tag
 
 ### 1.0.1
 - Add keep both tag for whitespace and non-whitespace control

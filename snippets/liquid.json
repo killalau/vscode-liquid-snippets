@@ -212,6 +212,13 @@
             "{% endpaginate %}"
         ]
     },
+    "Tag comment, whitespaced": {
+        "prefix": "comment-",
+        "description": "Comment tag: comment, whitespaced",
+        "body": [
+            "{%- comment -%}$1{%- endcomment -%}"
+        ]
+    },
     "Tag if, whitespaced": {
         "prefix": "if-",
         "description": "Control flow tag: if, whitespaced",

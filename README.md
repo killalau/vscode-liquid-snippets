@@ -18,6 +18,12 @@ Visual Studio Marketplace link: [https://marketplace.visualstudio.com/items?item
 3. Type `ext install vscode-liquid-snippets`
 4. Reload Visual Studio Code
 
+## Emmet Enable
+Go to user settings and add the following:
+```
+"emmet.includeLanguages": { "liquid": "html" },
+```
+
 ## Usage
 Type part of a snippet, press `enter`, and the snippet unfolds.
 
@@ -167,6 +173,9 @@ img_url
 ```
 
 ## Release
+
+### 1.1.1
+- Update readme, step to enable Emmet
 
 ### 1.1.0
 - Add whitespaced comment tag

@@ -621,5 +621,32 @@
         "prefix": "img_url",
         "description": "URL filter: img url",
         "body": "| img_url: '${1:medium}'"
+    },
+    "Tag schema": {
+        "prefix": "schema",
+        "description": "Schema tag: schema",
+        "body": [
+            "{% schema %}",
+            "\t{\n\t\t$4\n\t}",
+            "{% endschema %}"
+        ]
+    },
+    "Tag stylesheet": {
+        "prefix": "stylesheet",
+        "description": "Stylesheet tag: stylesheet",
+        "body": [
+            "{% stylesheet %}",
+            "\t$4",
+            "{% endstylesheet %}"
+        ]
+    },
+    "Tag javascript": {
+        "prefix": "javascript",
+        "description": "Javascript tag: javascript",
+        "body": [
+            "{% javascript %}",
+            "\t$4",
+            "{% endjavascript %}"
+        ]
     }
 }

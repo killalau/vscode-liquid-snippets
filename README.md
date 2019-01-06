@@ -89,6 +89,10 @@ raw
 layout
 layoutnone
 paginate
+schema
+stylesheet
+stylesheet_scss
+javascript
 ```
 
 ### Array Filter
@@ -173,6 +177,9 @@ img_url
 ```
 
 ## Release
+
+### 1.2.0
+- Add theme tags: schema, stylesheet, stylesheet_scss, javascript
 
 ### 1.1.1
 - Update readme, step to enable Emmet

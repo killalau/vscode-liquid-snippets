@@ -212,6 +212,44 @@
             "{% endpaginate %}"
         ]
     },
+    "Tag schema": {
+        "prefix": "schema",
+        "description": "Schema tag: schema",
+        "body": [
+            "{% schema %}",
+            "\t{",
+            "\t\t$1",
+            "\t}",
+            "{% endschema %}"
+        ]
+    },
+    "Tag stylesheet": {
+        "prefix": "stylesheet",
+        "description": "Stylesheet tag: stylesheet",
+        "body": [
+            "{% stylesheet %}",
+            "\t$1",
+            "{% endstylesheet %}"
+        ]
+    },
+    "Tag stylesheet for scss": {
+        "prefix": "stylesheet_scss",
+        "description": "Stylesheet tag: stylesheet for scss",
+        "body": [
+            "{% stylesheet '${1:scss}' %}",
+            "\t$2",
+            "{% endstylesheet %}"
+        ]
+    },
+    "Tag javascript": {
+        "prefix": "javascript",
+        "description": "Javascript tag: javascript",
+        "body": [
+            "{% javascript %}",
+            "\t$4",
+            "{% endjavascript %}"
+        ]
+    },
     "Tag comment, whitespaced": {
         "prefix": "comment-",
         "description": "Comment tag: comment, whitespaced",
@@ -621,32 +659,5 @@
         "prefix": "img_url",
         "description": "URL filter: img url",
         "body": "| img_url: '${1:medium}'"
-    },
-    "Tag schema": {
-        "prefix": "schema",
-        "description": "Schema tag: schema",
-        "body": [
-            "{% schema %}",
-            "\t{\n\t\t$4\n\t}",
-            "{% endschema %}"
-        ]
-    },
-    "Tag stylesheet": {
-        "prefix": "stylesheet",
-        "description": "Stylesheet tag: stylesheet",
-        "body": [
-            "{% stylesheet %}",
-            "\t$4",
-            "{% endstylesheet %}"
-        ]
-    },
-    "Tag javascript": {
-        "prefix": "javascript",
-        "description": "Javascript tag: javascript",
-        "body": [
-            "{% javascript %}",
-            "\t$4",
-            "{% endjavascript %}"
-        ]
     }
 }

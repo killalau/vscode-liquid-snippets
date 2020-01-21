@@ -84,6 +84,8 @@ capture- // whitespace stripped
 ```javascript
 include
 includewith    // Theme Tag {% include %} with parameters
+render
+renderwith    // Theme Tag {% render %} with parameters
 section
 raw
 layout

@@ -181,19 +181,29 @@ img_url
 ## Release
 
 ### 1.2.0
+
+- Add theme tag: render, renderwith
+
+### 1.2.0
+
 - Add theme tags: schema, stylesheet, stylesheet_scss, javascript
 
 ### 1.1.1
+
 - Update readme, step to enable Emmet
 
 ### 1.1.0
+
 - Add whitespaced comment tag
 
 ### 1.0.1
+
 - Add keep both tag for whitespace and non-whitespace control
 
 ### 1.0.0
+
 - Add whitespace control
 
 ## License
+
 MIT

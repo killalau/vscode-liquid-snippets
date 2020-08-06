@@ -1,41 +1,51 @@
 # Shopify Liquid Template Snippets for VS Code
+
 This extension for Visual Studio Code adds snippets for Shopify Liquid Template.
 
 Visual Studio Marketplace link: [https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets](https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets)
 
 ## Preview
+
 ![Showcase](./images/showcase.gif)
 
 ## Prerequisite
+
 1. Install the latest Visual Studio Code
 
 ## Dependencies
+
 1. [Liquid Languages Support](https://marketplace.visualstudio.com/items?itemName=neilding.language-liquid)
 
 ## Installation
+
 1. Launch Code
 2. From the command palette `Ctrl`-`Shift`-`P` (Windows, Linux) or `Cmd`-`Shift`-`P` (OSX)
 3. Type `ext install vscode-liquid-snippets`
 4. Reload Visual Studio Code
 
 ## Emmet Enable
+
 Go to user settings and add the following:
+
 ```
 "emmet.includeLanguages": { "liquid": "html" },
 ```
 
 ## Usage
+
 Type part of a snippet, press `enter`, and the snippet unfolds.
 
 Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.
 
 ### Comment Tag
-```javascript
+
+```
 comment- // whitespace stripped
 ```
 
 ### Control Flow Tag
-```javascript
+
+```
 if
 else
 elsif
@@ -53,7 +63,8 @@ when-   // whitespace stripped
 ```
 
 ### Iteration Tag
-```javascript
+
+```
 cycle
 cyclegroup
 for
@@ -71,7 +82,8 @@ tablerow-   // whitespace stripped
 ```
 
 ### Variable Tag
-```javascript
+
+```
 assign
 increment
 decrement
@@ -81,11 +93,12 @@ capture- // whitespace stripped
 ```
 
 ### Theme Tag
-```javascript
+
+```
 include
-includewith    // Theme Tag {% include %} with parameters
+includewith // Theme Tag {% include %} with parameters
 render
-renderwith    // Theme Tag {% render %} with parameters
+renderwith // Theme Tag {% render %} with parameters
 section
 raw
 layout
@@ -94,11 +107,40 @@ paginate
 schema
 stylesheet
 stylesheet_scss
-javascript
+
+```
+
+### Schema Tag
+
+```
+_schema
+_text
+_textarea
+_image_picker
+_radio
+_select
+_checkbox
+_range
+_color
+_font
+_collections
+_product
+_blog
+_page
+_link_list
+_url
+_video
+_richtext
+_html
+_article
+_header
+_paragraph
+_blocks
 ```
 
 ### Array Filter
-```javascript
+
+```
 join
 first
 last
@@ -111,15 +153,17 @@ uniq
 ```
 
 ### HTML Filter
-```javascript
+
+```
 img_tag
-img_tag_param  // HTML Filter {% img_tag %} with parameters
+img_tag_param // HTML Filter {% img_tag %} with parameters
 script_tag
 stylesheet_tag
 ```
 
 ### Math Filter
-```javascript
+
+```
 abs
 ceil
 divided_by
@@ -132,7 +176,8 @@ modulo
 ```
 
 ### Money Filter
-```javascript
+
+```
 money
 money_with_currency
 money_without_trailing_zeros
@@ -140,7 +185,8 @@ money_without_currency
 ```
 
 ### String Filter
-```javascript
+
+```
 append
 camelcase
 captialize
@@ -156,7 +202,7 @@ remove_first
 replace
 replace_first
 slice
-slice_single   // String Filter 'slice' with single parameter
+slice_single // String Filter 'slice' with single parameter
 split
 strip
 lstrip
@@ -172,7 +218,8 @@ url_param_escape
 ```
 
 ### URL Filter
-```javascript
+
+```
 asset_url
 asset_img_url
 img_url
@@ -180,13 +227,17 @@ img_url
 
 ## Release
 
+### 1.4.0
+
+- Add new schema tags: \_schema, \_text, \_page, ...
+
+### 1.3.0
+
+- Add theme tags: render, renderwith
+
 ### 1.2.0
 
-- Add theme tag: render, renderwith
-
-### 1.2.0
-
-- Add theme tags: schema, stylesheet, stylesheet_scss, javascript
+- Add theme tags: schema, stylesheet, stylesheet_scss,
 
 ### 1.1.1
 

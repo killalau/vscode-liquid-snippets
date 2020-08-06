@@ -227,9 +227,10 @@ img_url
 
 ## Release
 
-### 1.4.0
+### 2.0.0
 
 - Add new schema tags: \_schema, \_text, \_page, ...
+- BREAKING: remove hard/auto dependency of the extension
 
 ### 1.3.0
 

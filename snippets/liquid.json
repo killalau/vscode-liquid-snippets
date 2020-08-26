@@ -801,11 +801,11 @@
             "},$8"
         ]
     },
-    "Shopify Schama color": {
+    "Shopify Schema color": {
         "prefix": "_color",
         "body": [
             "{",
-            "\t\"type\" \"color\",",
+            "\t\"type\": \"color\",",
             "\t\"id\": \"$1\",",
             "\t\"label\": \"$2\",",
             "\t\"default\": \"$3\",",

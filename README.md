@@ -227,6 +227,10 @@ img_url
 
 ## Release
 
+### 2.0.1
+
+- Fix typo for color picker in schema
+
 ### 2.0.0
 
 - Add new schema tags: \_schema, \_text, \_page, ...

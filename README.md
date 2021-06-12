@@ -227,6 +227,10 @@ img_url
 
 ## Release
 
+### 2.0.2
+
+- Fix missing colon in tag _color
+
 ### 2.0.1
 
 - Fix typo for color picker in schema

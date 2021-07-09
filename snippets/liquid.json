@@ -692,15 +692,15 @@
     "Shopify Schema blocks": {
         "prefix": "_blocks",
         "body": [
-            "\"blocks\":[",
+            "\"blocks\": [",
             "\t{",
             "\t\t\"type\": \"$1\",",
             "\t\t\"name\": \"$2\",",
-            "\t\t\"settings\":[",
+            "\t\t\"settings\": [",
             "\t\t\t$3",
             "\t\t]",
-            "\t },$4",
-            " ]",
+            "\t},$4",
+            "]",
             ""
         ]
     },

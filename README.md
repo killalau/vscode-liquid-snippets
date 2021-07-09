@@ -227,9 +227,13 @@ img_url
 
 ## Release
 
+### 2.0.3
+
+- Fix wrong spacing in schema blocks
+
 ### 2.0.2
 
-- Fix missing colon in tag _color
+- Fix missing colon in tag \_color
 
 ### 2.0.1
 

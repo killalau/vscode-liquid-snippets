@@ -836,6 +836,18 @@
             "},$4"
         ]
     },
+    "Shopify Schema collection list": {
+      "prefix": "_collection_list",
+      "body": [
+        "{",
+        "  \"type\": \"product_list\",",
+        "  \"id\": \"${1:id}\",",
+        "  \"label\": \"${1:label}\",",
+        "  \"limit\": ${1:limit}",
+        "}"
+      ],
+      "description": "Shopify Schema collection list"
+    },
     "Shopify Schema product dropdown": {
         "prefix": "_product",
         "body": [

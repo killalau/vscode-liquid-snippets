@@ -895,14 +895,25 @@
         "prefix": "_video",
         "body": [
             "{",
+            "\t\"type\": \"video\",",
+            "\t\"id\": \"$1\",",
+            "\t\"label\": \"$2\",",
+            "\t\"info\": \"$3\",",
+            "},$4"
+        ]
+    },
+    "Shopify Schema video_url": {
+        "prefix": "_video_url",
+        "body": [
+            "{",
             "\t\"type\": \"video_url\",",
             "\t\"id\": \"$1\",",
             "\t\"label\": \"$2\",",
-            "\t\"accept\": [$7\"youtube\", \"vimeo\"],",
-            "\t\"default\": \"$3\",",
-            "\t\"info\": \"$4\",",
-            "\t\"placeholder\": \"$5\"",
-            "},$6"
+            "\t\"accept\": [$3\"youtube\", \"vimeo\"],",
+            "\t\"default\": \"$4\",",
+            "\t\"info\": \"$5\",",
+            "\t\"placeholder\": \"$6\"",
+            "},$7"
         ]
     },
     "Shopify Schema richtext": {
@@ -955,6 +966,53 @@
             "\t\"type\": \"paragraph\",",
             "\t\"content\": \"$1\"",
             "},$2"
+        ]
+    },
+    "Shopify Schema number": {
+        "prefix": "_number",
+        "body": [
+            "{",
+            "\t\"type\": \"number\",",
+            "\t\"id\": \"$1\",",
+            "\t\"label\": \"$2\",",
+            "\t\"default\": $3,",
+            "\t\"info\": \"$4\",",
+            "\t\"placeholder\": \"$5\"",
+            "},$6"
+        ]
+    },
+    "Shopify Schema color_background": {
+        "prefix": "_color_background",
+        "body": [
+            "{",
+            "\t\"type\": \"color_background\",",
+            "\t\"id\": \"$1\",",
+            "\t\"label\": \"$2\",",
+            "\t\"default\": \"$3\",",
+            "\t\"info\": \"$4\"",
+            "},$5"
+        ]
+    },
+    "Shopify Schema inline_richtext": {
+        "prefix": "_inline_richtext",
+        "body": [
+            "{",
+            "\t\"type\": \"inline_richtext\",",
+            "\t\"id\": \"$1\",",
+            "\t\"label\": \"$2\",",
+            "\t\"default\": \"<p>$3<\/p>\"",
+            "},$4"
+        ]
+    },
+    "Shopify Schema liquid": {
+        "prefix": "_liquid",
+        "body": [
+            "{",
+            "\t\"type\": \"liquid\",",
+            "\t\"id\": \"$1\",",
+            "\t\"label\": \"$2\",",
+            "\t\"default\": \"$3\"",
+            "},$4"
         ]
     }
 }
